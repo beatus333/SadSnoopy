@@ -5,7 +5,8 @@
     --cor-de-fundo: #839958;
     --fundo-senha: #d3968c;
     --fundo-texto: #f7f4d5;
-    --borda: #1056666;
+    --borda: #105666;
+    --branco: #oa3323;
     --roboto: 'Roboto', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
 }
@@ -15,12 +16,13 @@
 }
 
 body {
+    margin: 0;
     color: var(--branco);
     background-image: url("https://i.pinimg.com/736x/a6/10/df/a610dfb15619a2a438b0ba7061aec284.jpg");
     background-repeat: no-repeat;
-    background-size: 20000
+    background-size: cover;
     background-attachment: fixed;
-    font-family: var(--Sniglet);
+    font-family: var(--roboto);
     min-height: 100vh;
 }
 
@@ -112,6 +114,13 @@ body {
 
 label{
     font-size: 20px;
+}
+
+.parametro-senha-checkbox{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
 }
 
 .checkbox{

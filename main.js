@@ -30,7 +30,7 @@ function aumentaTamanho() {
     geraSenha();
 }
 
-for (i = 0; i < checkbox.length; i++) {
+for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].onclick = geraSenha;
 }
 
@@ -50,10 +50,17 @@ function geraSenha() {
     if (checkbox[3].checked) {
         alfabeto = alfabeto + simbolos;
     }
+    if (alfabeto.length === 0) {
+        campoSenha.value = '';
+        const valorEntropia = document.querySelector('.entropia');
+        valorEntropia.textContent = 'Selecione pelo menos um tipo de caractere.';
+        forcaSenha.classList.remove('fraca', 'media', 'forte');
+        return;
+    }
+
     let senha = '';
     for (let i = 0; i < tamanhoSenha; i++) {
-        let numeroAleatorio = Math.random() * alfabeto.length;
-        numeroAleatorio = Math.floor(numeroAleatorio);
+        let numeroAleatorio = Math.floor(Math.random() * alfabeto.length);
         senha = senha + alfabeto[numeroAleatorio];
     }
     campoSenha.value = senha;
