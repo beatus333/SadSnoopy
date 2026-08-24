@@ -16,13 +16,11 @@
 }
 
 body {
-    margin: 0;
-    color: var(--branco);
-    background-image: url("https://i.pinimg.com/736x/a6/10/df/a610dfb15619a2a438b0ba7061aec284.jpg");
+    background-image: url("coraline\ \(1\).jpeg"); /* Digite o nome exato do arquivo com a extensão */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: var(--roboto);
+    font-family: var(--Sniglet);
     min-height: 100vh;
 }
 
